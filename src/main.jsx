@@ -3,7 +3,7 @@ import "animate.css";
 import "./index.css";
 
 // routing
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 
 // pages
@@ -23,7 +23,7 @@ import "./index.css";
 import Expenses from "./pages/expenses/Expenses.jsx";
 import Store from "./pages/store/Store.jsx";
 // make routing
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Layout />,
