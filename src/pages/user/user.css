@@ -1,0 +1,12 @@
+.user .user-info .items .item:hover .overLay {
+  animation: itemsOverLay 0.4s both linear;
+}
+
+@keyframes itemsOverLay {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0;
+  }
+}

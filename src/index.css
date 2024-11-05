@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"); */
+
+body {
+    direction: rtl;
+    /* font-family: "Raleway", sans-serif!important; */
+    font-family: "Cairo", sans-serif!important;
+}
+
+
+
+aside ul li a.active svg{
+    color: #2AD87F;
+}
