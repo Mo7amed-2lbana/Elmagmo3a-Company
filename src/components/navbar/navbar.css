@@ -1,0 +1,8 @@
+nav .Links .nav-links a button{
+transition: all .5s;
+outline: none;
+}
+
+nav .Links .nav-links a.active button , nav .Links .nav-links a:hover button{
+    background-color: #155E75!important;
+}
