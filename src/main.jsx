@@ -22,6 +22,8 @@ import "animate.css";
 import "./index.css";
 import Expenses from "./pages/expenses/Expenses.jsx";
 import Store from "./pages/store/Store.jsx";
+import UserDetails from "./pages/userDetails/UserDetails.jsx";
+
 // make routing
 const router = createHashRouter([
   {
@@ -29,7 +31,6 @@ const router = createHashRouter([
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
-      { path: "/user", element: <User /> },
       { path: "add", element: <Add /> },
       { path: "addIncome", element: <AddIncome /> },
       { path: "/income", element: <Income /> },
@@ -39,6 +40,11 @@ const router = createHashRouter([
       { path: "expenses", element: <Expenses /> },
       { path: "addStore", element: <AddStore /> },
       { path: "store", element: <Store /> },
+      {
+        path: "/user",
+        element: <User />,
+        children: [{ path: "userDetails/:userId", element: <UserDetails /> }],
+      },
     ],
   },
 ]);
