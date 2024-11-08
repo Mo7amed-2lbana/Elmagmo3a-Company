@@ -1,9 +1,10 @@
 import "./user.css";
 import imgPerson from "../../assets/myimg.png";
 import MainTitle from "../../components/mainTitle/MainTitle";
-import { Link, Outlet } from "react-router-dom";
 import UserDetails from "../userDetails/UserDetails";
 import { useState } from "react";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
+
 
 const User = () => {
   let allMonay = 0;
@@ -32,8 +33,7 @@ const User = () => {
   });
 
   const [userId, setUserId] = useState(null);
-  const [openModal, setOpenModal] = useState(true);
-
+  const [openModal, setOpenModal] = useState(false);
 
   console.log(allMonay);
 
@@ -47,11 +47,11 @@ const User = () => {
               <MainTitle title={"قائمة المناديب"} />
             </div>
             {/* Start Main Title  */}
-            <div className="items grid grid-cols-5 gap-3">
+            <div className="items grid grid-cols-5 gap-5">
               {nums.map((el, idx) => (
                 <>
-                  <div className="item relative cursor-pointer bg-white overflow-hidden rounded-md">
-                    <div className="iamge bg-red-400 hover:overflow-hidden ">
+                  <div className="item relative cursor-pointer border  overflow-hidden rounded-md">
+                    <div className="image">
                       <img
                         style={{ verticalAlign: "bottom" }}
                         src={imgPerson}
@@ -59,25 +59,28 @@ const User = () => {
                         className=" w-[200px]"
                       />
                     </div>
-                    <div className="overLay  top-[100%] w-full h-full absolute bg-[rgba(21,94,117)] text-white flex justify-center items-center">
-                      <div className="details text-center">
-                        {/* <h3 > المندوب: <span className="text-main-color">محمد البنا </span></h3>
-                              <h3 >الرخصه : <span className="text-main-color">3310</span></h3>
-                              <h3 >منطقة : <span className="text-main-color">التجمع</span></h3>
-                              <h3 >الهاتف: <span className="text-main-color">01112356854</span></h3>
-                              <h3 >جي بي اس  : <span className="text-main-color">10N</span></h3> */}
-                        <h2 onClick={()=>{
-                          setUserId(idx)
-                          setOpenModal(true)
-                        }}>
-                          معلومات عن المندوب
+                    <div className="overLay  top-[100%] w-full h-full absolute bg-[rgba(0,0,0,.5)] text-white flex justify-center items-center">
+                      <div className="details text-center flex items-center gap-1">
+                        <h2
+                          onClick={() => {
+                            setUserId(idx);
+                            setOpenModal(true);
+                          }}
+                          className=" border-b-2 font-[700]"
+                        >
+                          تفاصيل
                         </h2>
+                          <FaArrowAltCircleLeft size={20} className="mt-1"/>
                       </div>
                     </div>
                   </div>
                 </>
               ))}
-              <UserDetails openModal={openModal} setOpenModal={setOpenModal} userId={userId} />
+              <UserDetails
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+                userId={userId}
+              />
             </div>
           </div>
         </div>

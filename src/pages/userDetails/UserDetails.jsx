@@ -29,7 +29,7 @@ const UserDetails = ({ openModal, setOpenModal, userId }) => {
               <div className="details flex-1 ">
                 <div className=" bg-[#fafafa] p-2 hover:bg-[#f1f1f1] my-3 flex items-center">
                   <h3 className=" transition-all  hover:ms-1 font-[600]">
-                    المندوب :
+                    إسم المندوب :
                   </h3>
                   <span className="text-main-color text-center block ms-3">
                     محمد البنا{" "}
@@ -47,7 +47,7 @@ const UserDetails = ({ openModal, setOpenModal, userId }) => {
 
                 <div className=" bg-[#fafafa] p-2 hover:bg-[#f1f1f1] my-3 flex items-center">
                   <h3 className=" transition-all  hover:ms-1 font-[600]">
-                    منطقة :
+                    المنطقة :
                   </h3>
                   <span className="text-main-color text-center block ms-3">
                     التجمع
