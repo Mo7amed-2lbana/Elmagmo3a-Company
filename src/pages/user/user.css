@@ -1,5 +1,13 @@
 .user .user-info .items .item:hover .overLay {
-  animation: itemsOverLay 0.4s both linear;
+  animation: itemsOverLay 0.3s both linear;
+}
+.user .user-info .items .item .image img{
+
+  transition: .3s;
+
+}
+.user .user-info .items .item:hover .image img{
+  transform: scale(1.1);
 }
 
 @keyframes itemsOverLay {
